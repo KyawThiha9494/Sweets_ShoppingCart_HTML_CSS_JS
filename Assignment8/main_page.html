@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The HTML5 Herald</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+    <header>
+        <div class="top-menu row">
+            <div class="promotion col-3">
+                Free shipping for anything
+            </div>
+            <div class="col"></div>
+            <div id='accmenu' class="col-4">
+                <!--<div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button">
+                      Account Menu
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="#">Profile</a>
+                      <a href="#">Settings</a>
+                    </div>
+                </div>-->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Account Menu
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <a class="dropdown-item" href="#">Settings</a>
+                    </div>
+                  </div>
+                <button class="btn btn-secondary">
+                    Create an account
+                </button>
+
+
+                <!--<ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">
+                        Account Menu
+                        <ul class="list-group list-group-horizontal">
+                            <li class="list-group-item"><a href='#'>Profile</a></li>
+                            <li class="list-group-item"><a href='#'>Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <a href='#'>Create an account</a>
+                    </li>
+                </ul>-->
+            </div>
+        </div>
+        <div class="logo-bar row">
+            <div class="col-3">
+                <input type="text" name="searchbar" id="searchbar" placeholder="Searchbar">
+            </div>
+            <div class="col center-content">
+                <img class="logo" src="doughnut.jpg"></img>
+            </div>
+            <div class="col-3 center-content">
+                <a href='#'><img class="icon" src="cart.png"></img></a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="d-flex">
+            <ul class="list-group list-group-horizontal mx-auto">
+                <li class="list-group-item"><a href='#'>Bread</a></li>
+                <li class="list-group-item"><a href='#'>Doughnut</a></li>
+                <li class="list-group-item"><a href='#'>Sweets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="center-content">
+        <img class="banner"" src="banner.jpg"></img>
+    </div>
+
+    <div class="mainbody center-content">
+        <h1>Cart</h1>
+        <table class="table cart-table" id="myTable">
+        <tr> <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Total</th>
+        <th>Remove</th>
+        </tr>
+        <tr id="sweetRow">
+        <td><img src="sweets.jpg"></img></td>
+        <td>Macarons</td>
+        <td>$10</td>
+        <td><input class="qty-value" type="text" id="qtyitem1"  name="qtyitem1" value="1"></td>
+        <td id="sweetAmount">$10</td>
+        <td><button class="remove-item" type="button" onclick="return remove_item('sweetRow');">X</button></td>
+        </tr>
+        <tr id="cakeRow">
+        <td><img src="cake.jpg"></img></td>
+        <td>Cakes</td>
+        <td>$20</td>
+        <td><input class="qty-value" type="text"  id="qtyitem2" name="qtyitem2" value="1"></td>
+        <td id="cakeAmount">$20</td>
+        <td><button class="remove-item" type="button" onclick="return remove_item('cakeRow');">X</button></td>
+        </tr>
+    </table>
+
+
+        <div class="bigbottommenu container">
+            <div class="row">
+                <div class="minisidemenu col-4">
+                    <button type="button" onclick="return updateCart();">UPDATE CART</button>
+                    <button type="button">CONTINUE SHOPPING</button>
+                </div>
+                <div class="col-4"></div>
+                <div class="billtotal col-4">
+                    <H2>CART TOTAL</H2>
+                   <table class="table cart-total-table" >
+                       <tr>
+                       <td>Subtotal</td>
+                       <td id="subtotal">$30</td>
+                       </tr>
+                       <tr>
+                       <td>Shipping</td>
+                       <td>Free</td>
+                       </tr>
+                       <tr>
+                       <td>Total</td>
+                       <td id="total">$30</td>
+                       </tr>
+                    </table>
+                    <button type="button">PROCEED TO CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer class="center-content">
+    <p>Pictures from <a href="https://github.com/john-smilga/js-cart-setup" title="js cart setup">https://github.com/john-smilga/js-cart-setup</a></p>
+    <p>Shopping cart Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+</footer>
+</div>
+<script src="./MainPage.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
