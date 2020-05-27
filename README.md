@@ -5,6 +5,7 @@ HTML is used to create the actual content of the page, such as written text, and
 
 Javascript is for the functionality of the page such as being able to reflect changes in quantity and total price when pressing the buttons like Update Cart or Remove [x] item. 
 
+Also used Bootstrap and JQUERY. 
 
 My Shopping Cart on Sweets, Macarons and Cakes
 
