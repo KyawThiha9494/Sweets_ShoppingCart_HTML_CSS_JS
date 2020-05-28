@@ -10,6 +10,3 @@ Also used Bootstrap and JQUERY.
 My Shopping Cart on Sweets, Macarons and Cakes
 
 ![Sweets_Shopping_Cart HTML_CSS_Javascript-1](https://user-images.githubusercontent.com/65886071/83040462-da27a000-a071-11ea-980f-16cf8e0c432a.jpg)
-
-
-KyawThiha
